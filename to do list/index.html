@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<body>
+    <div id="notification">
+        <p id="noti-msg"></p>
+        <span class="material-symbols-outlined" id="noti-del">delete</span>
+
+    </div>
+    <p id="hearder-text">To Do list</p>
+    <div id="list-box">
+        <div id="addwork">
+            <div id="input_txt">
+                <input type="text" id="input-box" placeholder="Enter your Task here .........">
+                <span class="material-symbols-outlined unselectable" id="add-btn">add_notes</span>
+            </div>
+        </div>
+
+        <div id="all-tasks-container">
+            <!-- <div id="each-task">
+                <p>This is the template </p>
+                <span class="material-symbols-outlined btns assign-btn">assignment_turned_in</span>
+                <span class="material-symbols-outlined btns" id="del-btn">delete</span>
+            </div> -->
+        </div>
+
+    </div>
+
+
+    <audio id="clickSound" src="addSound.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>

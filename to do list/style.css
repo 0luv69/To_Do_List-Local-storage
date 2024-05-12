@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #31363F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.unselectable {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Standard syntax */
+}
+
+
+#notification {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    z-index: 100;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(218, 150, 150);
+    border: 2px solid red;
+    border-radius: 0px 0px 0px 20px;
+    transition: .3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    visibility: hidden;
+}
+
+
+#d {
+    width: 90%;
+    color: #212024;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+#noti-del {
+    border-radius: 50px;
+    color: red;
+    font-size: 1rem;
+}
+
+#noti-del:hover {
+    cursor: pointer;
+    color: #212024;
+    background-color: red;
+
+}
+
+#hearder-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#list-box {
+    border-radius: 20px;
+    background-color: #212024;
+    box-shadow: rgba(242, 240, 240, 0.19) 0px 10px 20px, rgba(246, 244, 244, 0.23) 0px 6px 6px;
+    height: 80vh;
+    width: 40vw;
+    min-width: 300px;
+}
+
+
+#addwork {
+    margin-top: 20px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input_txt {
+    width: 80%;
+    height: 46px;
+    background-color: #DFF5FF;
+    border-radius: 30px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#input_txt input {
+    background-color: #DFF5FF;
+    box-sizing: border-box;
+    width: 88%;
+    height: 100%;
+    border: none;
+    outline: none;
+
+    font-size: 1.2rem;
+}
+
+
+#input_txt input::placeholder {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+#add-btn {
+    margin-left: 5px;
+    color: blue;
+    font-size: 1.8rem;
+}
+
+#add-btn:hover {
+    color: black;
+    border-radius: 50px;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+
+
+#all-tasks-container {
+    height: 85%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#each-task ::-webkit-scrollbar {
+    display: none;
+}
+
+
+#each-task {
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: rgb(49, 47, 45);
+    min-height: 60px;
+    width: 98%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+
+    box-shadow: rgba(251, 250, 250, 0.25) 0px 54px 55px, rgba(250, 250, 250, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 254, 254, 0.17) 0px 12px 13px, rgba(255, 254, 254, 0.09) 0px -3px 5px;
+    transition: 1.5s;
+
+}
+
+
+#each-task p {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    overflow: scroll;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    width: 80%;
+}
+
+
+#del-btn {
+    color: red;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.assign-btn {
+    margin-left: 20px;
+    color: green;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.assign-btn-selected {
+    color: black;
+    background-color: greenyellow;
+    border-radius: 2px;
+}
+
+.btns:hover {
+    background-color: #DFF5FF;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    #list-box {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    #hearder-text {
+        font-size: 3rem;
+
+    }
+
+
+    #list-box {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 292px) {
+    #hearder-text {
+        font-size: 2.5rem;
+
+    }
+}
+
+
+@keyframes animate_addedTask {
+    from {
+        transform: translateY(-100%);
+        width: 65%;
+    }
+
+    to {
+        transform: translateY(0);
+        width: 98%;
+    }
+}
